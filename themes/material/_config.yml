@@ -33,7 +33,7 @@ scheme: Paradox
 
 # UI & UX: slogan, color, effect
 uiux:
-    slogan: "Hi, nice to meet you"
+    slogan: "遇见你真好"
     theme_color: "#0097A7"
     theme_sub_color: "#00838F"
     hyperlink_color: "#00838F"
@@ -120,10 +120,10 @@ toc:
 
 # SNS Menu
 sns:
-    email: youremail@email.com
+    email: 774206981@qq.com
     facebook: "https://www.facebook.com/facebook"
     twitter: "https://twitter.com/twitter"
-    googleplus: "https://www.google.com/"
+    googleplus: "https://www.baidu.com/"
     weibo:
     instagram:
     tumblr:
@@ -160,7 +160,7 @@ sidebar:
     categories:
         use: true
         icon: chrome_reader_mode
-        divider: true
+        divider: false
     pages:
         #About:
             #link: "/about"
