@@ -14,7 +14,7 @@ after_script:
   - git config user.name "流水"
   - git config user.email "774206981@qq.com"
   - git add .
-  - git commit -m "Update docs"
+  - git commit -m "更新文章"
   - git push --force --quiet "https://${GITHUB_TOKEN}@${GITHUB_REF}" master:master
 branches:
   only:
