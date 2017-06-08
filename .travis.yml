@@ -7,6 +7,18 @@ install:
     - npm install
 before_install:
     - "npm install -g hexo-cli"
+after_install:
+after_script:
+  - cd ./public
+  - git init
+  - git config user.name "流水"
+  - git config user.email "774206981@qq.com"
+  - git add .
+  - git commit -m "Update docs"
+  - git push --force --quiet "https://${GITHUB_TOKEN}@${GITHUB_REF}" master:master
+branches:
+  only:
+    - pages
 cache:
   directories:
     - "node_modules"
