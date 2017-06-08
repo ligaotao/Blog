@@ -1,14 +1,14 @@
-language: node_js
+language: node_js # 语言
 node_js:
-  - "7"
+  - "7" # nodejs 版本
 script:
-    - hexo generate
+    - hexo generate # 执行的脚本命令
 install:
-    - npm install
+    - npm install # 安装命令
 before_install:
-    - "npm install -g hexo-cli"
+    - "npm install -g hexo-cli" # 安装前执行
 after_install:
-after_script:
+after_script: # 执行脚本命令后
   - cd ./public
   - git init
   - git config user.name "流水"
@@ -16,7 +16,7 @@ after_script:
   - git add .
   - git commit -m "更新文章"
   - git push --force --quiet "https://${GITHUB_TOKEN}@${GITHUB_REF}" master:master
-branches:
+branches: # 影响分支
   only:
     - pages
 cache:
