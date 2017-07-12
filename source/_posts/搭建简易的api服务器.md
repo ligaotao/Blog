@@ -12,9 +12,8 @@ categories: nodejs
 1. 首先选取了一个`nodejs`框架`koa`来当我们的工具
 
 2. 安装所需的依赖
-
-``` bash
-  npm install koa
+```shell
+  npm install koa  
   npm install koa2-cors
   npm install koa-router
 ```
@@ -27,3 +26,41 @@ npm install supervisor
 
 就可以通过`supervisor app`来启动项目
 
+## 项目结构
+
+ ```bash
+ --- controller 控制器
+ ｜
+ |--router 路由
+ |
+ |-- app.js //入口文件
+ ```
+
+```javascript
+// router
+const router = require('koa-router')()
+const UserControl = require('../controller/user')
+router
+  .get('/api/login', UserControl.login)
+module.exports = router
+```
+
+
+```javascript
+// controller/user
+class UserControl {
+  static async login (ctx) {
+    let test = {
+      status: 200,
+      massage: '响应成功',
+      data: {
+        msg: 'hello world'
+      }
+    }
+    ctx.body = JSON.stringify(test)
+  }
+}
+
+module.exports =  UserControl
+
+```
