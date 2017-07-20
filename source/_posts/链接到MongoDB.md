@@ -44,7 +44,7 @@ db.once('open', function(res) {
 module.exports = mongoose
 ```
 
-下面我们定义一个movie的`Schema`, 命名为`user.js`
+下面我们定义一个movie的`Schema`, 命名为`movie.js`
 
 ```javascript
 var mongoose = require('./db.js'),
