@@ -68,3 +68,95 @@ var movieSchema = new Schema({
 
 ## Model
 
+导出model
+
+```javascript
+// movie.js
+var mongoose = require('./db.js'),
+    Schema = mongoose.Schema;
+
+var movieSchema = new Schema({          
+    name : { type: String },                    // 电影名称
+    meta: {type: String},                        // 描述
+    url: {type: String}                        // 下载地址
+})
+module.exports = mongoose.model('movie', 'movieSchema')
+```
+
+## 基本操作
+
+### 保存
+
+> Model#save([fn])
+
+```javascript
+var Movie = require('./movie');
+
+function insert () {
+    var movie = new Movie({
+        name: '侠客行',
+        url: '123',
+        meta: '好看的电影',
+        ftp: '下载地址'
+    })
+    movie.save(function  (err, res) {
+        if (err) {
+            console.log('错误', err)
+        } else {
+            console.log('成功', res)
+        }
+    })
+}
+
+insert()
+```
+
+执行后则看到 数据库插入了一条数据
+![](/Blog/images/db_save.png)
+
+### 更新
+
+> Model.update(conditions, update, [options], [callback])
+
+根据名称 更新下载地址
+
+```javascript
+var Movie = require('./movie');
+
+function update () {
+    var wherestr = {
+        name: '侠客行'
+    }
+    var updatestr = {
+        url: '更新后的地址'
+    }
+    Movie.update(wherestr, updatestr, function (err, res) {
+        if (err) {
+            console.log("错误:" + err);
+        }
+        else {
+            console.log("更新成功:" + res);
+        }
+    })
+}
+update()
+```
+更新后
+
+![](/Blog/images/db_update.png)
+
+### 删除
+
+````javascript
+function del () {
+    var wherestr = {name: '侠客行'}
+    Movie.remove(wherestr, function (err, res) {
+        if (err) {
+            console.log('未删除')
+        } else {
+            console.log('删除成功')
+        }
+    })
+}
+del()
+````
