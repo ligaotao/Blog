@@ -162,10 +162,14 @@ sidebar:
         icon: chrome_reader_mode
         divider: false
     pages:
-        #About:
-            #link: "/about"
-            #icon: person
-            #divider: false
+        关于:
+            link: "/about"
+            icon: person
+            divider: false
+        时间轴:
+            link: "/about"
+            icon: person
+            divider: false
     article_num:
         use: false
         divider: false
