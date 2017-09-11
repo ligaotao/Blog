@@ -167,7 +167,7 @@ sidebar:
             icon: person
             divider: false
         时间轴:
-            link: "/about"
+            link: "/timeline"
             icon: person
             divider: false
     article_num:
