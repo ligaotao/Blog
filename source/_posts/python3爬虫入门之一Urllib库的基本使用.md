@@ -1,6 +1,7 @@
 ---
 title: python3爬虫入门之一Urllib库的基本使用
 date: 2017-09-11 15:22:53
+updated: 2017-09-12 10:20:00
 tags:
 categories: python
 ---
@@ -52,11 +53,25 @@ print(response.read())
 ## GET和POST方式传参
 
 ```python
-import urllib.request
+from urllib import request, parse
 
 data = {}
 data['wd'] = 'PHP是世界上最美好的语言'
-data = data
-response = urllib.request.urlopen('https://cn.bing.com/search', data)
-print(response.read())
+data = parse.urlencode(data)  # 对对象进行url编码
+data = data.encode('utf-8')  # 然后进行utf8编码 不然会抱错
+response = request.urlopen('https://cn.bing.com/search', data)
+
+print(response.read().decode('utf-8'))  # 解码并打印HTML内容
+```
+
+像其他都是类似的，比如发一个`PUT`请求
+
+```python
+import urllib.request
+DATA = b'some data'
+req = urllib.request.Request(url='http://localhost:8080', data=DATA,method='PUT')
+with urllib.request.urlopen(req) as f:
+    pass
+print(f.status)
+print(f.reason)
 ```
