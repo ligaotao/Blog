@@ -1,5 +1,5 @@
 ---
-title: vue中的Props和事件
+title: vue中父子组件交互
 date: 2017-09-14 09:46:21
 tags:
 categories: javascript
