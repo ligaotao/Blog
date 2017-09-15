@@ -1,5 +1,5 @@
 ---
-title: vue中父子组件交互
+title: vue中父子组件通信
 date: 2017-09-14 09:46:21
 tags:
 categories: javascript
