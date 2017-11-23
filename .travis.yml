@@ -7,7 +7,6 @@ install:
     - npm install # 安装命令
 before_install:
     - "npm install -g hexo-cli" # 安装前执行
-    - "npm install -g hexo-material"
 after_install:
 after_script: # 执行脚本命令后
   - cd ./public
