@@ -1,6 +1,6 @@
 language: node_js # 语言
 node_js:
-  - "7" # nodejs 版本
+  - "8" # nodejs 版本
 script:
     - hexo generate # 执行的脚本命令
 install:

@@ -18,9 +18,7 @@
     "hexo-renderer-stylus": "^0.3.1",
     "hexo-server": "^0.2.0",
     "hexo-tag-demo": "^0.2.10",
-    "vue-cli": "^2.8.2"
-  },
-  "devDependencies": {
+    "vue-cli": "^2.8.2",
     "hexo-material": "^1.4.0"
   }
 }
