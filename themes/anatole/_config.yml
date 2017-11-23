@@ -1,0 +1,28 @@
+# Blog
+keywords: Javascript,HTML,CSS,Vue,Linux
+author: 流水,774206981@qq.com
+description: 很高兴遇到你
+avatar: /images/avatar.png
+
+# Social Accounts
+twitter: 
+rss: 
+weibo: 
+instagram: 
+github: 
+facebook: 
+
+# Comment
+duoshuo: 
+disqus: 
+gentie: 
+# Valine comments https://valine.js.org
+valine:
+  enable: true # if you want use valine, please set enable: true
+  appid:  BaSted97WQgfSNB1qrF4mirY-gzGzoHsz # your leancloud appid
+  appkey: io2EcVp2Q3LdQWr1LJruY6bC  # your leancloud appkey
+  notify: false # true/false:mail notify !!!Test,Caution. https://github.com/xCss/Valine/wiki/Valine-%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E4%B8%AD%E7%9A%84%E9%82%AE%E4%BB%B6%E6%8F%90%E9%86%92%E8%AE%BE%E7%BD%AE
+  verify: false # true/false:verify code
+  avatar: mm # avatar style https://github.com/xCss/Valine/wiki/avatar-setting-for-valine
+  placeholder: 还在等什么 # comment box placeholder
+
