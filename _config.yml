@@ -77,10 +77,3 @@ archive_generator:
   yearly: false
   monthly: false
   daily: false
-
-# 公式
-math:
-  engine: 'mathjax' # or 'mathjax'
-  mathjax:
-    src: "//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
-    config:
