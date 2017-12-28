@@ -1,5 +1,5 @@
 ---
-title: Django入门
+title: Django入门之一
 date: 2017-12-26 10:15:46
 tags:
 categories: Python
