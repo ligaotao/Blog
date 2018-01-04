@@ -1,6 +1,10 @@
 ---
 title: Django-admin定制
-date: 2017-12-28 15:41:36
+date: 2018-01-03 15:41:36
 tags:
 categories: Python
 ---
+
+## ModelAdmin
+
+> ModelAdmin非常灵活，它还有许多选项可以来自定义界面
