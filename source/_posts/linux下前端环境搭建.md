@@ -2,7 +2,7 @@
 title: linux下前端环境搭建
 date: 2017-09-29 14:32:16
 tags:
-categories: liunx
+categories: Linux
 ---
 
 ## 系统环境
