@@ -5,6 +5,20 @@ tags:
 categories: Linux
 ---
 
+## 查看所属用户组
+
+``` bash
+groups
+```
+
+### 给用户增加用户组
+
+> -a 是 append的意思 如果不加 -a 执行覆盖操作 不加的话 ligaotao 的 用户组则变为 ligaotao docker
+
+``` bash
+sudo usermod -a -G docker ligaotao
+```
+
 ### 禁止图形界面启动
 
 ```bash
