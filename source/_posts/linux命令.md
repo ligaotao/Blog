@@ -47,3 +47,11 @@ sudo systemctl set-default multi-user.target
     ```linux
     rm -rf demo
     ```
+
+### screen
+
+1. 创建一个screen窗口, `screen -S iterm`
+
+2. 让当前窗口后台,  `ctrl + a + d`
+
+3. 恢复窗口 `screen -r id` id是窗口的id 可以使用`screen -ls` 查看

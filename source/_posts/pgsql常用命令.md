@@ -5,6 +5,15 @@ tags:
 categories: 数据库
 ---
 
+## 重启数据库
+
+`sudo /etc/init.d/postgresql restart`
+
+
+## 数据库配置文件
+
+`/etc/postgresql/10/main/postgresql.conf`
+
 ## 查询全部数据库
 
 `select datname from pg_database;`
