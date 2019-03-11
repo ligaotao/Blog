@@ -2,7 +2,7 @@
 title: Django-debug-toolbar调试工具配置
 date: 2017-12-28 15:48:00
 tags:
-categories: Python
+categories: Django
 ---
 
 > `Django Debug Toolbar` 是开发`Django`应用程序时的必备工具，可以输出详细的调试信息，会话信息等，大大方便开发

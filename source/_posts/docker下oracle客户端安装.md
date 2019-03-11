@@ -4,7 +4,7 @@ date: 2019-02-26 09:59:14
 tags:
 ---
 
-> 在docker中安装oracle客户端，需要编辑Dockerfile文件，将oracle客户端放入docker内部
+> 项目涉及到Oracle数据转换到postgresql，在docker中安装oracle客户端，需要编辑Dockerfile文件，将oracle客户端放入docker内部
 
 1. 下载Oracle 18,12或11.2“Basic”或“Basic Light”zip文件：[64位](https://www.oracle.com/technetwork/topics/linuxx86-64soft-092277.html) 或[32位](https://www.oracle.com/technetwork/topics/linuxsoft-082809.html)，与您的Python体系结构相匹配。
 
@@ -13,13 +13,6 @@ tags:
 3. 环境依赖需要`libaio1`安装包
 
 4. 以下为Dockerfile文件内容
-
-COPY命令不能拷贝上下文之外的文件
-ADD可以添加并自动解压.tar文件
-
-RUN apt-get update && apt-get install zip -y
-
-增加-y是 默认为同意 不然会出现安装失败
 
 
 ```bash
@@ -50,7 +43,7 @@ RUN sh -c "echo /opt/oracle/instantclient_18_3 > /etc/ld.so.conf.d/oracle-instan
 
 # RUN export LD_LIBRARY_PATH=/opt/oracle/instantclient_18_3:$LD_LIBRARY_PATH
 
-RuN mkdir -p /opt/oracle/instantclient_12_2/network/admin
+RUN mkdir -p /opt/oracle/instantclient_12_2/network/admin
 
 WORKDIR /usr/src/app
 
@@ -62,6 +55,12 @@ RUN mkdir -p var/log
 RUN python manage.py collectstatic
 
 ```
+
+注意点
+
+1. COPY命令不能拷贝上下文之外的文件
+2. ADD可以添加并自动解压.tar文件
+3. RUN apt-get update && apt-get install zip -y # 增加-y是 默认为同意 不然会出现安装失败
 
 
 参考文档

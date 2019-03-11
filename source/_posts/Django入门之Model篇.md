@@ -2,7 +2,7 @@
 title: Django入门之Model篇
 date: 2018-01-02 15:08:49
 tags:
-categories: Python
+categories: Django
 ---
 
 ## 创建Models

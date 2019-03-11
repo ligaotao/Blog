@@ -2,7 +2,7 @@
 title: Django-JET主题使用
 date: 2018-01-03 16:57:35
 tags:
-categories: Python
+categories: Django
 thumbnail: /images/django-jet.png
 ---
 

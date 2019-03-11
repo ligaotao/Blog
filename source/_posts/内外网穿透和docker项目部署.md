@@ -47,3 +47,32 @@ categories: Linux
 7. 将项目重新载入 `docker load -i [images]` images为 解压出的文件 如 `docker load -i hpjx_web`
 
 8. 跳转到内网的hpjx_docker 中执行 `docker-compose down` 然后再执行 `docker-compose up -d`
+
+# 将项目文件与包依赖进行分离
+
+> 当项目成熟后可以将项目文件与依赖进行分离, 这样部署起来仅需要上传代码部分即可
+
+1. 更改Dockerfile文件，不再拷贝项目文件
+   ```bash
+    WORKDIR /usr/src/app
+
+    COPY ./requirements.txt /usr/src/app
+    COPY pip.conf /root/.pip/pip.conf
+    RUN pip install --no-cache-dir -r requirements.txt
+   ```
+2. 在`docker-compose.yml`文件中增加文件映射
+  ```yml
+    web:
+    restart: always
+    build: ./web
+    expose:
+      - "8000"
+    volumes:
+      - /home/ligaotao/hpjx_docker/web:/usr/src/app
+      - /home/ligaotao/hpjx_docker/media:/usr/src/app/media
+    environment:
+      DEBUG: 'true'
+      ALLOWED_HOSTS: 192.168.0.118
+      DATABASE_URL: postgres://username:password@localhost/hpstdb
+    command: /usr/local/bin/gunicorn hpjx.wsgi:application -w 2 -b :8000
+  ```

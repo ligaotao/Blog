@@ -2,7 +2,7 @@
 title: Django入门之一
 date: 2017-12-26 10:15:46
 tags:
-categories: Python
+categories: Django
 ---
 
 > 本文是基于`Window 10` `Django 2.0` `Python 3.6`的环境写成
